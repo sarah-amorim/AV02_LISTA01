@@ -12,10 +12,15 @@ def fah_para_cel(fahrenheit):
     return (fahrenheit - 32) * 5/9
 
 
-c = float(input("Digite a temperatura em Celsius para transformar em Fahrenheit: "))
-resultado_fah = cel_para_fah(c)
-print(f"{c}°C → {resultado_fah}°F")
+while True:
+    try:
+        c = float(input("Digite a temperatura em Celsius para transformar em Fahrenheit: "))
+        resultado_fah = cel_para_fah(c)
+        print(f"{c}°C → {resultado_fah}°F")
 
-fah = float(input("Digite a temperatura em Fahrenheit para transformar em Celsius: "))
-resultado_c = fah_para_cel(fah)
-print(f"{fah}°F → {resultado_c}°C")
+        fah = float(input("Digite a temperatura em Fahrenheit para transformar em Celsius: "))
+        resultado_c = fah_para_cel(fah)
+        print(f"{fah}°F → {resultado_c}°C")
+
+    except ValueError:
+        print("Digite numeros validos")

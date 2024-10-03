@@ -15,10 +15,14 @@ def calculadora(num01, num02):
     print(f"SOMA: {soma}")
     print(f"SUBTRAÇAO: {sub}")
     print(f"MULTIPLICAÇAO: {mult}")
-    print(f"DIVISAO: {div}")
+    print(f"DIVISAO: {div:.2}")
 
 
 print("CALCULADORA")
-n1 = float(input("Digite o primeiro numero: "))
-n2 = float(input("Digite o segundo numero: "))
-calculadora(n1, n2)
+while True:
+    try:
+        n1 = float(input("Digite o primeiro numero: "))
+        n2 = float(input("Digite o segundo numero: "))
+        calculadora(n1, n2)
+    except ZeroDivisionError:
+        print("Nao e possivel dividir um numero por 0")

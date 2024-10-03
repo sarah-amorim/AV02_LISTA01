@@ -17,6 +17,15 @@ def primo(numero):
 
 
 while True:
-    num = int(input("Digite um numero para saber se ele e primo (True) ou nao (False): "))
-    resultado = primo(num)
-    print(resultado)
+    try:
+        num = int(input("Digite um numero para saber se ele e primo (True) ou nao (False): "))
+
+        if num < 0:
+            print("Digite um numero positivo")
+            break
+
+        resultado = primo(num)
+        print(resultado)
+
+    except ValueError:
+        print("Digite um numero valido")

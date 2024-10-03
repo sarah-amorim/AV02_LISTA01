@@ -9,12 +9,17 @@ def soma(lista_de_numeros):
     print(f"A soma desses valores e igual a {resultado}")
 
 
-qnt = int(input("Quantos numeros deseja somar? "))
+while True:
+    try:
+        qnt = int(input("Quantos numeros deseja somar? "))
 
-numeros = []
+        numeros = []
 
-for i in range(qnt):
-    numero = int(input("Numero: "))
-    numeros.append(numero)
+        for i in range(qnt):
+            numero = int(input("Numero: "))
+            numeros.append(numero)
 
-soma(numeros)
+        soma(numeros)
+
+    except ValueError:
+        print("Digite numeros validos")

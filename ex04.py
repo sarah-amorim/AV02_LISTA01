@@ -16,16 +16,24 @@ def calculadora(opcao, numero01, numero02):
         print(f"{numero01} * {numero02} = {mult}")
     elif opcao == 4:
         div = numero01 / numero02
-        print(f"{numero01} / {numero02} = {div}")
+        print(f"{numero01} / {numero02} = {div:.2}")
+    else:
+        print("Digite uma opcao valida")
 
 
 print("CALCULADORA")
-print("SOMA [1]")
-print("SUBTRAÇAO [2]")
-print("MULTIPLICAÇAO [3]")
-print("DIVISAO [4]")
-opc = int(input("Digite o numero da operaçao deseja executar: "))
+while True:
+    try:
+        print("\nSOMA [1]")
+        print("SUBTRAÇAO [2]")
+        print("MULTIPLICAÇAO [3]")
+        print("DIVISAO [4]\n")
 
-n1 = float(input("Digite o primeiro numero: "))
-n2 = float(input("Digite o segundo numero: "))
-calculadora(opc, n1, n2)
+        opc = int(input("Digite o numero da operaçao deseja executar: "))
+
+        n1 = float(input("Digite o primeiro numero: "))
+        n2 = float(input("Digite o segundo numero: "))
+        calculadora(opc, n1, n2)
+
+    except ZeroDivisionError and ValueError:
+        print("\nDigite um numero valido")

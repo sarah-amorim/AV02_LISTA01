@@ -5,6 +5,7 @@ caractere ‘P’, se seu valor for positivo, e ‘N’, se seu valor for zero o
 
 
 def verificar(numero):
+
     if numero > 0:
         print("P")
     elif numero < 0:
@@ -13,5 +14,9 @@ def verificar(numero):
         print("neutro")
 
 
-num = int(input("Digite um numero para saber se ele e positivo ou negativo: "))
-verificar(num)
+while True:
+    try:
+        num = int(input("Digite um numero para saber se ele e positivo ou negativo: "))
+        verificar(num)
+    except ValueError:
+        print("Valor invalido, digite um numero inteiro!")

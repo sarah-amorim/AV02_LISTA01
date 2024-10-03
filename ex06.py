@@ -23,4 +23,4 @@ def vogais(string):
 
 palavra = input("Digite algo para saber o numero de vogais presentes na string: ")
 resultado = vogais(palavra)
-print(f"A qauntidade de vogais em '{palavra}' e igual a {resultado}")
+print(f"A quantidade de vogais em '{palavra}' e igual a {resultado}")
